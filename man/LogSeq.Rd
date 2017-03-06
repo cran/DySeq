@@ -28,16 +28,17 @@ Kenny, Kashy & Cook (2006) provide further examples.
 }
 }
 \examples{
+\dontrun{
 data(CouplesCope)
 my.states<-StateExpand(CouplesCope, 2:49, 50:97)
 my.trans<-StateTrans(my.states, FALSE)
-my.logseq<-LogSeq(my.trans)
+my.logseq<-LogSeq(my.trans, single.case=TRUE)
 my.logseq
 
 plot(my.logseq) # interaction can be plotted
 
 single.LogSeq(my.logseq, 41) # for single case analysis
-
+}
 }
 \references{
 \itemize{
@@ -45,4 +46,3 @@ single.LogSeq(my.logseq, 41) # for single case analysis
  \item Kenny, D. A., Kashy, D. A., & Cook, W. L. (2006) <DOI: 10.1177/1098214007300894>
 }
 }
-
